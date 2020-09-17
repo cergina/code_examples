@@ -1,0 +1,7 @@
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Creational\Singleton\Singleton Example\bin\Debug\Singleton Example.exe.config
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Creational\Singleton\Singleton Example\bin\Debug\Singleton Example.exe
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Creational\Singleton\Singleton Example\bin\Debug\Singleton Example.pdb
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Creational\Singleton\Singleton Example\obj\Debug\Singleton Example.csprojAssemblyReference.cache
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Creational\Singleton\Singleton Example\obj\Debug\Singleton Example.csproj.CoreCompileInputs.cache
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Creational\Singleton\Singleton Example\obj\Debug\Singleton Example.exe
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Creational\Singleton\Singleton Example\obj\Debug\Singleton Example.pdb
