@@ -1,0 +1,7 @@
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Behavioral\Observer\ObserverExample\bin\Debug\ObserverExample.exe.config
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Behavioral\Observer\ObserverExample\bin\Debug\ObserverExample.exe
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Behavioral\Observer\ObserverExample\bin\Debug\ObserverExample.pdb
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Behavioral\Observer\ObserverExample\obj\Debug\ObserverExample.csprojAssemblyReference.cache
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Behavioral\Observer\ObserverExample\obj\Debug\ObserverExample.csproj.CoreCompileInputs.cache
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Behavioral\Observer\ObserverExample\obj\Debug\ObserverExample.exe
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Behavioral\Observer\ObserverExample\obj\Debug\ObserverExample.pdb
