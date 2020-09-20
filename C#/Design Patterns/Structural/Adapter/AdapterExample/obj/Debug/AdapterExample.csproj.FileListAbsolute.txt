@@ -1,0 +1,7 @@
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Structural\Adapter\AdapterExample\bin\Debug\AdapterExample.exe.config
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Structural\Adapter\AdapterExample\bin\Debug\AdapterExample.exe
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Structural\Adapter\AdapterExample\bin\Debug\AdapterExample.pdb
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Structural\Adapter\AdapterExample\obj\Debug\AdapterExample.csprojAssemblyReference.cache
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Structural\Adapter\AdapterExample\obj\Debug\AdapterExample.csproj.CoreCompileInputs.cache
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Structural\Adapter\AdapterExample\obj\Debug\AdapterExample.exe
+C:\Users\Maros\Documents\GitHub\code_examples\C#\Design Patterns\Structural\Adapter\AdapterExample\obj\Debug\AdapterExample.pdb
