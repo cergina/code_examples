@@ -1,0 +1,2 @@
+# In linux everything is a file (stderr, dev, printer, ...)
+# Specific settings (eg.: bash) can be found in ~ path as .bashrc

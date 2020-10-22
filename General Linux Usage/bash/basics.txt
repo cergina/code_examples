@@ -1,0 +1,29 @@
+ # This tutorial is not a have-it-all or doesn't have to be 100% correct. 
+ # That's why we use "man ls" to find all info about certain command.
+ # This is just a cheat sheet
+
+# SSH access
+ssh xcerget@bin.demo-cert.sk
+pyta heslo: xcergetatbit
+
+
+# GENERAL COMANDS
+
+cd .					# go to this directory
+cd ..					# go one directory higher
+cd ../.././.. 			# go 3 directories higher (watch out for . and .. difference)
+pwd						# print working directory
+sudo your_password		# enter privileged mode for a while
+
+clear					# Clears terminal balast
+man man					# Manual to manual :)
+man spec_com			# Manual for specified command
+ls						# List all files in directory
+ls -alt					# Show hidden files, longer description, times of creation,...
+ls matrix*				# Search for all files that contain matrix in name 
+chmod +x matrix.py		# Add execute permission to matrix.py file
+ArrowUp/ArrowDown		# History of commands
+Ctrl + R part			# Search for commands that contain part of command
+./ [TAB 2x]				# shows all possible files
+sudo apt-get update		# keep linux up to date
+sudo apt-get upgrade 	# keep linux up to date

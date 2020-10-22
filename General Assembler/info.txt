@@ -1,0 +1,46 @@
+# This is just some scattered info
+
+# each line has a line, has an address, eg.: 0x4005db
+# register, similiar to global variables
+# registers are 32/64bit wide
+
+# special registers
+~ PC - program counter (which instruction to execute next)
+~ everytime we execute an instruction, we advance the PC (point2next_instruction)
+~ vsetky operacie cez simple operacie
+
+mov eax, 0x5 		# transfer 5 to register eax, now 5
+add eax, 0x3		# add 3 to register eax, now 8
+mov ebx, 0x8		# transfer 8 to register ebx, now 8
+sub eax, ebx 		# eax -= ebx, now eax is 0
+
+# Memory
+~ what doesnt fit in registers lives in memory
+~ memory is stored at addresses
+
+~ ak na adrese 14 je 0x1234
+mov eax, [14]		# spravi, ze do eax priradi 0x1234
+
+# Special register Stack pointer
+~ stores data from top to down
+~ the most recently entered request resides at the top of the stack and program takes requests from top LIFI
+
+# Speed (always consider one level up only)
+Register file 	576B		# Smallest		/	Fastest
+L1 Cache		64kB		# 100x Bigger	/	4 x Slower
+L2 Cache		20MB		# 300x Bigger	/	1.5x Slower
+M.Memory 		16GB		# N x Bigger	/ 	2 x Slower
+
+# Control Flow
+~ via GOTO (jump - unconditional, branch, call)
+~ ZEROFLAG = if adding 5+3, result is > 0, zeroflag=0
+	= if subtracting 8 from 8, result is 0, zeroflag=1
+~ branch (if) equal to zero == beq
+~ jump (if) equal / zero == je, jz
+~ Clever use of STACK is with CALL instruction
+	# calling a function for example
+	# we want to jump back where we came from, but could be called from more places
+	! pushes next address to the stack so the ret instruction can pop it off !
+	! its done also by adding instruction to PC !
+
+

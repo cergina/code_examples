@@ -1,0 +1,32 @@
+# Let's say we have an ELF binary file, which was compiled by gcc on Ubuntu
+
+gdb license_1 		# opening file license_1
+
+disassemble main 	# every code has a main
+
+set disassembly-flavor intel		# lepsia citatelnost
+
+~ output is ugly, but dont be scared, get a higher level view of it, get a rough picture of control flow (see image in this file example)
+
+	info: address on which it starts <+0> is the disassembled main
+			* if address is 0x0004005bd,  +102 is in DEC, so the address is 0x000400623
+
+1) mark all calls, differentiating parts of addresses
+2) make a tree of jump calls
+
+break *main			# add breakpoint at function main
+run 				# start a program
+info registers		# pozrieme sa co je v registroch
+		~ hladame register "rip" alias instruction pointer
+si					# step iterate (go to new instruction)
+		~ teraz vidno zmenu v registroch (aspon na rip)
+ni					# volaco namiesto "si", Enter repeats same command
+
+run ARGUMENT		# spustenie s argumentom
+break *0x000400607	# breakpoint na adresu 0x000400607
+continue			# run program normally (which can be to the next breakpoint)
+
+ps.:EAX is first 32 bits of RAX register
+set $eax=0			# prepises register eax na 0 (napr, po teste strcmp)
+
+# cutter.re / nastroj co graf vykonavania programu spravi za teba

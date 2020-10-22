@@ -1,0 +1,55 @@
+# After opening a file(s) in vim, you are within command mode
+~
+~ Outside of VIM
+~
+vim -O file1.c file2.py		# Otvorenie VIMu v rezime rozdelenej vertikalnej obrazovky
+
+~
+~ In insert mode
+~
+
+Home 	# zaciatok riadku
+End 	# koniec riadku
+ESC 	# opustenie insert modu a vkrocenie do command modu
+
+~
+~ In command mode (BASICS)
+~
+
+:w 				# save file
+:wq 			# save and quit
+:q 				# quit
+:q!				# force quit
+I 				# insert mode
+O				# insert line and enter insert mode
+shift O 		# insert line above line and enter insert mode
+shift G 		# bottom of the file
+
+
+~
+~ In command mode (TEXT MANIPULATION)
+~
+dd							# delete line
+3 dd						# delete 3 lines
+u							# Undo action
+Ctrl R 						# Redo action
+/searched_string ENTER 		# Searching for "searched_string"
+n                           # Find next
+shift N 					# Find previous
+%s/string_old/string_new/g 	# Search and replace (Don't ask)
+%s/string_old/string_new/gc	# Search and replace (Ask in each case)
+
+~
+~ In command mode (CODING)
+~
+:set number 								# Prepending line numbers
+syntax on 									# Highligting of syntax ON
+syntax off									# Highligting of syntax OFF
+:set expandtab shiftwidth=4 softtabstop=4 	# shorter TABs
+:!ls 										# Execute ls from VIM
+:!python % 									# Execute open script in python
+
+~
+~ In command mode (2 VERTICAL FILES OPEN)
+~
+ctrl W 			# Switching between 2 vertical windows

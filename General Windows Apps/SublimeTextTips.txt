@@ -1,0 +1,4 @@
+# Sublime Text tips 
+
+Ctrl + Alt + ArrowUp/ArrowDown		# Create new cursor above/under line
+
