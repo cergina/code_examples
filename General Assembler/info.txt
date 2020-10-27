@@ -44,3 +44,6 @@ M.Memory 		16GB		# N x Bigger	/ 	2 x Slower
 	! its done also by adding instruction to PC !
 
 
+# LEA vs MOV
+lea eax, [esp+0x1C]			# moves address to $eax
+mov eax, [esp+0x1C]			# moves value to $eax

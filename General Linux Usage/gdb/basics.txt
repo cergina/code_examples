@@ -25,8 +25,63 @@ ni					# volaco namiesto "si", Enter repeats same command
 run ARGUMENT		# spustenie s argumentom
 break *0x000400607	# breakpoint na adresu 0x000400607
 continue			# run program normally (which can be to the next breakpoint)
+del 				# remove all breakpoints
+define hook-stop	# define which commands will execute after breakpoint stop
+	info registers 	# self explain
+	x/24wx $esp		# prints stack
+	x/2i $eip 		# next 2 instructions
+	end
+
+x/wx $esp+0x5c
 
 ps.:EAX is first 32 bits of RAX register
 set $eax=0			# prepises register eax na 0 (napr, po teste strcmp)
 
 # cutter.re / nastroj co graf vykonavania programu spravi za teba
+
+info proc mappings	# look at mapped memory, eg.: look where is stack
+# Stack rolls from the bottom, so if START and END address is
+	~ 0xbffe b000 and 0xc000 0000 and size is 0x15000
+	~ it means that putting things to stack starts from highest address
+	~ but 0xc000 0000 doesn't belong to it anymore so -8, 0xbfff fff8
+
+x/wx $esp			# stack pointer of $esp
+
+#
+# Important talk (ASSEMBLER registers in code)
+#
+
+enter  				# CREATE a stack frame
+leave 				# DESTROY a stack frame
+
+~ ~ ~ example_0 ~ ~ ~
+	; enter 4, 0 ;	# reserve 4 amounts of space to local vars (int var;)
+push ebp
+mov ebp, esp
+sub esp, 4			# address goes lower, reserves space for locals	
+
+~ ~ ~ example_1 ~ ~ ~
+push 0xdeadbeef 	# push value to the stack
+pop eax 			# eax is now 0xdeadbeef
+
+~ ~ ~ example_2 ~ ~ ~ (Swapping contents of registers)
+push eax 			# eax to stack 	 STACK: 5, EAX: 5, EBX: 2
+mov eax, ebx 		# ebx -> eax 	 STACK: 5, EAX: 2, EBX: 2
+pop ebx 			# value from stack to ebx  STACK: --, EAX: 2, EBX: 5
+
+~ ~ ~ example_3 ~ ~ ~
+!! ebp (reg) 		# register used as base pointer eg.: <main + 0>
+
+; enter
+push ebp 			# top of stack is the address of base pointer
+mov ebp, esp 		# ebp now stores old stack top
+
+
+; leave
+mov esp, ebp 		# top of stack is the stored old top of stack
+pop ebp 			# do a pop from stack, store it in ebp
+
+~ ~ ~ example_4 ~ ~ ~
+call 				# push address after eip on to the stack, jmp2 eg:main
+ret 				# pop instr to eip=instr.pointer (call put it there)
+
