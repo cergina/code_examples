@@ -47,3 +47,43 @@ M.Memory 		16GB		# N x Bigger	/ 	2 x Slower
 # LEA vs MOV
 lea eax, [esp+0x1C]			# moves address to $eax
 mov eax, [esp+0x1C]			# moves value to $eax
+
+
+# Zoznam registrov
+rax
+rbx
+rcx
+rdx
+rsi
+rdi
+rbp
+...
+...
+...
+
+
+#####     Pristup k parametru svojej funkcie   ##########
+
+push rbp 		# Zalohovanie rbp
+mov rbp, rsp			rbp <-- rsp
+mov eax, [rbp + 8 + 8]	#obskocenie navratovej hodnoty a seba a sme na arg0
+.
+.
+.
+pop rbp 		# Obnova rbp
+ret
+
+######    Pristup k lokalnym premennym    ################
+push rbp 		# Zalohovanie rbp
+mov rbp, rsp			rbp <-- rsp
+mov eax, [rbp - 8 - 8]	# obskocenie kanarika (ak je) a skok na zac adresy
+
+ ~ char * ebx = buf	~	 mov ebx. rbp - 256 - 8 # kopia adresy
+ ~ ebx = buf[0]   	~    mov ebx, [rbp - 256 - 8] # obskok kanarika a na zaciatok premennej buf 
+.
+.
+.
+pop rbp 		# Obnova rbp
+ret
+
+#######################################################

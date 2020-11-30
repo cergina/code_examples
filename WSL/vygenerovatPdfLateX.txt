@@ -1,0 +1,13 @@
+# pouzivame tento image: https://hub.docker.com/r/m1k1o/latex
+# mat priecinok kde template je: C:\Users\Maros\Documents\template
+# NEUMIESTNOVAT NIKAM KDE JE 'š' alebo ' ' //medzera, specialne znaky
+# nastartovat Ubuntu 20.04 | WSL 2 | mat nainstalovany docker
+
+# stiahnut image
+$ docker pull m1k1o/latex:iso690
+
+# ist do priecinku kde je ten template
+$ cd /mnt/c/Users/Maros/Documents/template
+
+# vygenerujeme pdf s dokumentom
+$ docker run --rm --volume ${PWD}:/project m1k1o/latex:iso690 --biber

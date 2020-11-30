@@ -1,0 +1,22 @@
+# install building tools
+$ sudo apt-get install build-essential
+
+# Open text editor
+$ vim simple_sample.c
+
+
+# write a source code
+	#include<stdio.h>
+
+	int main()
+	{
+		printf("\nA sample C program\n\n");
+		return 0;
+	}
+
+
+# Compile source into executable
+$ gcc simple_sample.c -o sampleProgram
+
+# Run program
+$ ./sampleProgram

@@ -1,0 +1,21 @@
+# Make sure your Ubuntu 20.04 is running wsl 2.0
+# Open powershell in windows
+wsl -l -v
+
+  NAME                   STATE           VERSION
+* Ubuntu-20.04           Running         1
+  docker-desktop         Running         2
+  docker-desktop-data    Running         2
+
+# we see its running wsl 1
+wsl --set-version Ubuntu-20.04 2
+wsl --set-default-version 2
+
+#################
+
+# Open WSL Ubuntu, go to ~, open up visual studio code in windows, work on the subsystem from VS Code
+cd ~
+code .
+
+#################
+

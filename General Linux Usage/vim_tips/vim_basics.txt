@@ -16,6 +16,7 @@ ESC 	# opustenie insert modu a vkrocenie do command modu
 ~ In command mode (BASICS)
 ~
 
+:w !sudo tee % > /dev/null # If not possible to save file
 :w 				# save file
 :wq 			# save and quit
 :q 				# quit

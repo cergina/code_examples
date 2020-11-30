@@ -1,0 +1,12 @@
+docker run -dp 8080:80 docker/getting-started:pwd
+
+# pozrime si beziace id
+docker ps
+
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                  NAMES
+e082c0b3a239        docker/getting-started:pwd   "nginx -g 'daemon of…"   22 minutes ago      Up 22 minutes       0.0.0.0:8080->80/tcp   dreamy_khorana
+
+
+docker stop e082c0b3a239
+
+CONTAINER ID        IMAGE                        COMMAND                  CREATED             STATUS              PORTS                  NAMES
