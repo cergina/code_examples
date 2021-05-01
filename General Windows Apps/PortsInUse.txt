@@ -1,0 +1,6 @@
+# Run as ADMIN cmd.exe
+netstat -ano
+# Find required port in use, for example process id is 19808
+# now lets kill it
+taskkill /PID 19808 /f
+

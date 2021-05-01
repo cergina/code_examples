@@ -1,0 +1,3 @@
+whereis scp
+
+scp mysql.jar ubuntu@team14-20.studenti.fiit.stuba.sk:Desktop/
