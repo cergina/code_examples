@@ -1,0 +1,48 @@
+.NET Framework je stary a prisiel okolo roku 2000
+	- je to zaklad vsetkeho
+	- platforma, na ktorej staviame
+	- 
+
+.NET Core
+	cross platform support for .NET FW
+
+# CLR / Common language runtime
+	vykonanie programov pisanych v .NET FW (C#, VB, Visual C++, ...)
+# FCL / Framework class library
+	umoznuje pisanie programov v jazykoch
+# User and program interfaces 
+	tooly na vyvoj aplikacii, WPF, web services, console apps, ...
+
+
+# ASP.NET
+	webovy framework
+
+
+# mozeme pouzit akykolvek jazyk ktory implementuje .NET FW
+# ked kompilujeme napr. c# konvertuje sa to na intermediate language na CIL (common intermediate language) // toto nasledne CLR vykonava // Just In Time compiler will take it and translate it into machine code.
+
+F# je funkcionalny
+C# je objektovy
+
+ale je to jedno, lebo po prevode do CIL funguju rovnako, a preto mozeme mat C# aplikaciu co vola F# kniznicu
+
+nove verzie C# nekoresponduju s .NET FW a su  kompatibilne spatne casto
+
+V 2016 zacali s .NET Core, cize pretvorili underlying layer, nad ktorou pracuju tie jazyky,
+preto prisiel .NET Core, lebo .NET FW spomaloval veci. Co podporuju, co pustaju, ... dropli
+backwards kompatibilitu na kopu starych veci.
+
+Kod pisany v C#
+
+Zmenila sa abstraction layer, C# 10 uz len .NET Core bude
+
+Po novom .NET Core od verzie <5; ) sa uz vola len .NET
+
+# Okej, ale co je .NET Standard? 
+	- mame dve abstrakcie co bezia C#, ... a idu proti nim veci
+	- co tak vytvorit nejaky most medzi tymi dvomi .NET FW a .NET Core, ale  je to aj pre xamarin, unity, mono, etc. ...
+
+S .NET 6 uz je len jedna (v teorii) abstrakcna vrstva a spravime vsetko do jednej abstrakcnej vrstve
+
+Cize .NET FW je zaparkovany na 4.8 a uz to nedostane nic nove (ide len na Windowse)
+.NET Core + bezi na Linuxe, Macu a ofc Windowse, nove verzie C# idu proti tej abstraktnej vrstve
