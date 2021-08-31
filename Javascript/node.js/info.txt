@@ -1,0 +1,66 @@
+- node.js neni jazyk ale runtime, ktory umoznuje spustat js na serveri
+- 2009 
+- webdeveloper mohol pisat aj BE konecne
+
+- riesi problemy
+
+# odkazujem sa na visual studio code Documents/node/proj1
+
+- how to build fullstack webapp
+visit url on internet that points to the server
+node handles the request and reads the file from the file system
+respond 
+
+- how to install
+vscode, command line, node -v, open in integrated terminal
+
+- z visualka vieme nasledne spustit priecinok v ktorom sa nachadza index.js
+node .
+
+- understand node runtime
+js funguje ako v browseri, ale je par rozdielov
+node ma built in identifiers, cize napr console
+ale aj global, tento objekt je namespace, ktory
+je dostupny pocas celeho procesu, cize napr 
+global.luckyNum = '23'; a stale bude pamatany inde,
+v browseri je to podobne ale window
+
+najdolezitejsia global je process, tam napr cez
+process.env.USER na linuxe meno, process.env.USERNAME na windowse meno pouzivatela
+
+# eventy
+ludia casto hovoria ze node.js je asynchronous event driven javascript runtime
+
+runtime implementuje nieco co sa nazyva event loop, tak ako browser, node intenzivne operacie da 
+na vedlajsi thread a iba jednoduche ostane non blocking idu na main threade - non blocking, cize
+node.js je dobry na real time aplikacie
+
+# callbacky
+we listen to events, events come in many forms. before node process finishes it emits event 'exit'
+we listen to the event using on and register a callback function as a second argument and thats why
+its called callback
+
+# mozeme ale aj vytvarat vlastne eventy, 
+
+# file system
+fs, built in, tiez to dokaze in blocking or non blocking way
+example again in vscode proj1
+
+tam je vysvetlene ze existuje readFile a readFileSync, na zaklade toho ktore je vypisane prve
+
+# promises
+async non blocking a produkuje clean code v porovnani s callbackmi
+
+# modul
+modul je len js subor, ktory exportuje svoj kod, ma vela built in modulov ako fs, events
+importuje sa s require()
+node ma novu podporu pre es moduly kde maju import/export
+zas odkaz na proj1
+
+
+# npm
+npm -v
+npm init -y
+// vytvori sa package.json, vytvori zavislost v nom ked dame napr instalaciu webserveru
+npm install express
+nasledne je v kode vysvetlene, ako nahodit na server atd
